@@ -1,0 +1,40 @@
+@import "~bootstrap/scss/bootstrap";
+
+// utils
+@import "utils/variables";
+@import "utils/mixin";
+@import "utils/space";
+@import "utils/typography";
+@import "utils/animation";
+@import "utils/hover";
+@import "utils/theme";
+@import "utils/theme-light";
+
+// base
+@import "base/button";
+@import "base/button-animation";
+@import "base/common";
+@import "base/cursor";
+@import "base/menu";
+@import "base/scroll";
+@import "base/switcher";
+@import "base/preloader";
+@import "base/line";
+@import "base/error";
+@import "base/title";
+
+// components
+
+@import "components/header";
+@import "components/hero";
+@import "components/portfolio";
+@import "components/service";
+@import "components/brand";
+@import "components/contact";
+@import "components/skill";
+@import "components/related";
+@import "components/slider";
+@import "components/pagination";
+@import "components/footer";
+
+

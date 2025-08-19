@@ -1,0 +1,21 @@
+.text-slider {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .title {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: capitalize;
+  }
+
+  .rfm-child {
+    margin-inline-end: 20px;
+  }
+
+  .text-slide-content {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+  }
+}

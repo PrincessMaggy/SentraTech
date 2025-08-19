@@ -1,0 +1,78 @@
+.pagination-2 {
+  gap: 3px;
+  display: flex;
+
+  @media #{$sm} {
+    justify-content: center;
+  }
+
+  .page-numbers {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    color: #fcfaf5;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include light {
+      color: #16254c;
+    }
+
+    &:not(.prev, .next):hover {
+      color: #16254c;
+      background-color: #f5f3ed;
+    }
+  }
+
+  .prev {
+    justify-content: flex-start;
+
+    @include rtl {
+      transform: rotate(180deg);
+      justify-content: flex-end;
+    }
+  }
+
+  .next {
+    justify-content: flex-end;
+
+    @include rtl {
+      transform: rotate(180deg);
+      justify-content: flex-start;
+    }
+  }
+
+  .current {
+    color: #16254c;
+    background-color: #f5f3ed;
+  }
+
+  i {
+    font-size: 18px;
+
+    &:hover {
+      color: var(--primary, #e8bf96);
+    }
+  }
+
+  path {
+    transition: all 0.3s;
+
+    @include light {
+      fill: #16254c;
+    }
+  }
+
+  svg {
+    width: 1em;
+    height: 1em;
+    font-size: 18px;
+
+    &:hover path {
+      fill: var(--primary, #e8bf96);
+    }
+  }
+}

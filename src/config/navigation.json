@@ -1,0 +1,12 @@
+{
+  "header": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Contact",
+      "path": "/contact"
+    }
+  ]
+}
