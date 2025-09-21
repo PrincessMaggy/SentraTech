@@ -5,9 +5,9 @@ export default function DevContact() {
   return (
     <main>
       <SeoData
-        title="Contact page"
-        meta_title="Contact page"
-        description="Contact page description"
+        title="Contact SentraTech"
+        meta_title="Contact SentraTech"
+        description="Contact SentraTech Description"
       />
       <MainContact customPaddingClass={"pt-90"} />
     </main>
