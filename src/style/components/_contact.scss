@@ -75,7 +75,9 @@
 
   .form {
     position: relative;
-
+    .input-item p{
+      color:  red;
+    }
     &.common {
       .input-item input,
       .input-item textarea {

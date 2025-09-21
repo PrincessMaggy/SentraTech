@@ -5,8 +5,9 @@ import { AppContext } from "@/context/app.context";
 
 import Logo from "../common/Logo";
 import Menu2 from "../menu/Menu2";
+import OffCanvas from "../offcanvas/OffCanvas";
 
-export default function Header3({ headerData }) {
+export default function Header({ headerData }) {
   const [show, setShow] = useState(false);
   const { direction } = useContext(AppContext);
   return (
@@ -28,6 +29,7 @@ export default function Header3({ headerData }) {
           </div>
         </div>
       </div>
+      <OffCanvas show={show} setShow={setShow} headerData={headerData} />
     </header>
   );
 }

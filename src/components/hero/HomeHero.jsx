@@ -11,7 +11,7 @@ import { FaPlay } from "react-icons/fa6";
 import VideoModal from "../common/VideoModal";
 import ImageComponent from "../common/ImageComponent";
 
-import { socialShare1 } from "@/lib/utils/helper/social";
+import { socialShare } from "@/lib/utils/helper/social";
 import hasFadeAnim from "@/lib/utils/animation/hasFadeAnim";
 import hasTextRevealAnim from "@/lib/utils/animation/hasTextRevealAnim";
 import hasTextMoveAnim from "@/lib/utils/animation/hasTextMoveAnim";
@@ -115,7 +115,7 @@ export default function HomeHero({ hero = undefined }) {
                     <ul className="hover-zoom">
                       {social.map((item, i) => (
                         <li key={`hero_social_link-${i}`}>
-                          {socialShare1(item)}
+                          {socialShare(item)}
                         </li>
                       ))}
                     </ul>

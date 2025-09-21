@@ -3,30 +3,24 @@ import siteConfig from "@/config/siteConfig.json";
 
 import Logo from "../common/Logo";
 
-import { socialShare1 } from "@/lib/utils/helper/social";
+import { socialShare } from "@/lib/utils/helper/social";
 
-export default function Footer2() {
+export default function Footer() {
   const { social, footer_info } = siteConfig;
-  const { mobile, email, copyright } = footer_info;
+  const { email, copyright } = footer_info;
 
   return (
     <footer className="footer pb-0">
       <div className="top">
         <div className="container g-0">
           <div className="row">
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-sm-12 p-0" style={{ width: "auto" }}>
               <div className="logo">
-                <Logo customWidth={100} customHeight={50} />
+                <Logo customWidth={70} customHeight={50} />
               </div>
             </div>
             <div className="col-lg-9">
               <div className="info">
-                <div>
-                  <h3 className="title">Contact</h3>
-                  <Link href={`tel:${mobile}`} className="link">
-                    {mobile}
-                  </Link>
-                </div>
                 <div>
                   <h3 className="title">Email</h3>
                   <Link href={`mailto:${email}`} className="link">
@@ -39,7 +33,7 @@ export default function Footer2() {
                     <ul className="hover-zoom">
                       {social.map((item, i) => (
                         <li key={`hero_social_link-${i}`}>
-                          {socialShare1(item)}
+                          {socialShare(item)}
                         </li>
                       ))}
                     </ul>

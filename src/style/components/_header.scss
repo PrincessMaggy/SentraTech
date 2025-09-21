@@ -83,8 +83,10 @@
     height: 20px;
     position: relative;
     margin-top: 5px;
-    display: inline-block;
-
+    display: none;
+ @media (max-width: 678px) {
+      display: inline-block;
+ }
     &::before {
       position: absolute;
       content: "";

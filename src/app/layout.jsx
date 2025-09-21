@@ -2,9 +2,9 @@ import siteConfig from "@/config/siteConfig.json";
 
 import { AppContextProvider } from "@/context/app.context";
 import { Toaster } from "sonner";
-import Footer2 from "@/components/footer/Footer2";
+import Footer from "@/components/footer/Footer";
 import ScrollTop from "@/components/common/ScrollTop";
-import Header3 from "@/components/header/Header3";
+import Header from "@/components/header/Header";
 import navigation from "@/config/navigation.json";
 
 import "@/style/main.scss";
@@ -33,10 +33,10 @@ export default function RootLayout({ children }) {
             <div id="smooth-wrapper">
               <div id="smooth-content">
                 <div className="body-wrapper font-heading-estedad">
-                  <Header3 headerData={navigation.header} />
+                  <Header headerData={navigation.header} />
 
                   {children}
-                  <Footer2 />
+                  <Footer />
                 </div>
               </div>
             </div>

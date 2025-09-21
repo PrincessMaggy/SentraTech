@@ -50,11 +50,11 @@ export default function Logo({
             />
             <p
               style={{
-                color: "#9A1541",
+                color: "#1E90FF",
                 fontWeight: "500",
               }}
             >
-              SentraTech Institute
+              SentraTech <br /> Institute
             </p>
           </div>
         ) : logo_text ? (
