@@ -23,9 +23,8 @@ export default function HomePortfolio({
   portfolios,
   rootUrl = "",
 }) {
-  const { sec_name, sec_title, short_description, see_all_btn } =
+  const { sec_name, sec_title, short_description } =
     portfolio?.frontmatter || {};
-
   const charAnim = useRef("");
   const textRevealAnim = useRef("");
   const textMoveAnim = useRef("");
@@ -62,7 +61,7 @@ export default function HomePortfolio({
               />
             </div>
           </div>
-          <div className="col-md-5">
+          <div className="col-md-8">
             <div className="sec-text-width" ref={textMoveAnim}>
               <p
                 dangerouslySetInnerHTML={convertWithBrSpanImg(
@@ -70,18 +69,6 @@ export default function HomePortfolio({
                 )}
               />
             </div>
-          </div>
-          <div className="col-md-3">
-            {see_all_btn && see_all_btn.enable && (
-              <div className="sec-btn" ref={fadeAnim1}>
-                <Link href={see_all_btn.link} className="wc-btn-underline">
-                  {see_all_btn.label}{" "}
-                  <span>
-                    <FaArrowRight />
-                  </span>
-                </Link>
-              </div>
-            )}
           </div>
         </div>
       </div>
@@ -122,25 +109,24 @@ export default function HomePortfolio({
                 key={`testimonial_section-${i}`}
               >
                 <div className="slide ">
-                  <Link href={`${rootUrl}/portfolio/${item.slug}`}>
-                    <Image
-                      width={700}
-                      height={500}
-                      style={{
-                        height: "auto",
-                        aspectRatio: "7/5",
-                        objectFit: "cover",
-                      }}
-                      src={item.frontmatter.image}
-                      className="jh-img"
-                      alt="Portfolio Image"
-                    />
-                    <h2 className="title">{item.frontmatter.title}</h2>
-                    <h3 className="date">
-                      {item.frontmatter.category[0]},{" "}
-                      {item.frontmatter.end_date}
-                    </h3>
-                  </Link>
+                  {/* <Link href={`${rootUrl}/portfolio/${item.slug}`}> */}
+                  <Image
+                    width={700}
+                    height={500}
+                    style={{
+                      height: "auto",
+                      aspectRatio: "7/5",
+                      objectFit: "cover",
+                    }}
+                    src={item.frontmatter.image}
+                    className="jh-img"
+                    alt="Portfolio Image"
+                  />
+                  <h2 className="title">{item.frontmatter.title}</h2>
+                  <h3 className="date">{item.frontmatter.end_date}</h3>
+                  <p>{item.frontmatter?.description}</p>
+
+                  {/* </Link> */}
                 </div>
               </SwiperSlide>
             ))}

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-import SkillCard1 from "./card/SkillCard1";
+import SkillCard from "./card/SkillCard";
 
 import hasFadeAnim from "@/lib/utils/animation/hasFadeAnim";
 import hasTextMoveAnim from "@/lib/utils/animation/hasTextMoveAnim";
@@ -23,7 +23,7 @@ export default function HomeSkill({ skill = undefined }) {
 
   return (
     <section className="skill">
-      <div className="container g-0 line pb-120 pt-130">
+      <div className="container g-0 line pb-20 pt-30">
         <div className="line-col-3">
           <div></div>
           <div></div>
@@ -43,7 +43,7 @@ export default function HomeSkill({ skill = undefined }) {
           {skills && skills.length && (
             <div className="grid-3" ref={fadeAnim}>
               {skills.map((skill, i) => (
-                <SkillCard1 key={`skill_item-${i}`} skill={skill} i={i} />
+                <SkillCard key={`skill_item-${i}`} skill={skill} i={i} />
               ))}
             </div>
           )}

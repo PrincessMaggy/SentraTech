@@ -18,26 +18,22 @@ export default function Home() {
   const portfolios = getSinglePage("/portfolios");
   const service = getListPage("/services/_index.md");
   const services = getSinglePage("/services");
-  const brand = getListPage("/brands/brand.md");
 
   return (
     <main>
-      <SeoData title="Home" meta_title="Home" description="Description" />
+      <SeoData
+        title="Home"
+        meta_title="SentraTech Institute"
+        description="Learn Automate Lead"
+      />
       <HomeHero hero={hero} />
       <HomeSkill skill={skill} />
-      <HomePortfolio
-        portfolio={portfolio}
-        portfolios={portfolios}
-        rootUrl="/"
-      />
       <HomeService
         service={service}
         services={services.slice(0, 4)}
         home={true}
         rootUrl="/"
       />
-
-      <HomeBrand brand={brand} />
 
       <PortfolioInnerPage
         portfolio={portfolio}

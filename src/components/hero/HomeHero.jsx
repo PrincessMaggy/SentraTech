@@ -72,20 +72,6 @@ export default function HomeHero({ hero = undefined }) {
         <div className="row">
           <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-6">
             <div className="left">
-              <div className="pb-20" ref={fadeAnim1} data-on-scroll="0">
-                <h1 className="typed_title color-primary">
-                  {typed_title.label}{" "}
-                  <span id="typed_list" ref={typeList}>
-                    {typed_title.text && typed_title.text.length
-                      ? typed_title.text.map((item, i) => (
-                          <span key={`type_list-${i}`}>{item}</span>
-                        ))
-                      : ""}
-                  </span>
-                  <span id="typed" ref={typed}></span>
-                </h1>
-              </div>
-
               <div className="title-area">
                 <div className="pb-0">
                   <h2
@@ -99,8 +85,20 @@ export default function HomeHero({ hero = undefined }) {
                 </div>
 
                 <div data-on-scroll="0" data-delay="0.8" ref={textMoveAnim}>
-                  <p>{sub_title}</p>
+                  <p className="color-primary">{sub_title}</p>
                 </div>
+              </div>
+              <div className="pb-20" ref={fadeAnim1} data-on-scroll="0">
+                <h1 className="typed_title color-secondary">
+                  <span id="typed_list" ref={typeList}>
+                    {typed_title.text && typed_title.text.length
+                      ? typed_title.text.map((item, i) => (
+                          <span key={`type_list-${i}`}>{item}</span>
+                        ))
+                      : ""}
+                  </span>
+                  <span id="typed" ref={typed}></span>
+                </h1>
               </div>
 
               {social && social.length && (
@@ -144,51 +142,11 @@ export default function HomeHero({ hero = undefined }) {
                     <Link href={`mailto:${email}`}>{email}</Link>
                   </div>
                 </div>
-
-                <div className="experience">
-                  <div>
-                    <h3 className="content">
-                      <span>
-                        {experience.number}
-                        {experience.suffix}
-                      </span>{" "}
-                      Years of <br />
-                      Experiences
-                    </h3>
-                  </div>
-                  <div className="work-process">
-                    <p
-                      className="image-link"
-                      onClick={() => setModalShow(true)}
-                    >
-                      <FaPlay />
-                    </p>
-                    <span>
-                      work <br /> Process
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {shape && shape.enable && (
-        <ImageComponent
-          width={104}
-          height={132}
-          src={shape.light_img}
-          darkSrc={shape.dark_img || shape.light_img}
-          customHeight="auto"
-          alt="Shape Image"
-          className="hero-shape"
-        />
-      )}
-      <VideoModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-        link={video}
-      />
     </section>
   );
 }

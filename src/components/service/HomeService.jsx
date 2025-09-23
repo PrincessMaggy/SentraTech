@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-import ServiceCard1 from "./card/ServiceCard1";
+import ServiceCard from "./card/ServiceCard";
 
 import { convertWithBrSpanImg } from "@/lib/utils/helper/converter";
 import hasTextMoveAnim from "@/lib/utils/animation/hasTextMoveAnim";
@@ -31,7 +31,7 @@ export default function HomeService({
   }, []);
   return (
     <section className="service-section">
-      <div className={`container g-0 line ${home ? "pt-120" : "pt-70 pb-130"}`}>
+      <div className={`container g-0 line ${home ? "pt-120" : "pt-70 pb-30"}`}>
         {home && (
           <>
             <div className="line-col-3">
@@ -69,7 +69,7 @@ export default function HomeService({
         {services && services.length && (
           <div className="grid" ref={fadeAnim}>
             {services.map((item, i) => (
-              <ServiceCard1
+              <ServiceCard
                 key={`service_card-${i}`}
                 service={item}
                 i={i}

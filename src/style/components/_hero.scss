@@ -34,7 +34,7 @@
   }
 
   .left {
-    padding-top: 280px;
+    padding-top: 180px;
     font-family: $font_estedad;
     @include zi(9);
 
@@ -50,7 +50,6 @@
       font-weight: 500;
       font-size: 24px;
       line-height: 1.2;
-      text-transform: uppercase;
       color: var(--white);
       margin-bottom: 70px;
 
@@ -115,110 +114,6 @@
     }
   }
 
-  .experience {
-    font-family: $font_estedad;
-    height: 100vh;
-    padding: 100px 70px;
-    background-color: var(--blue-light);
-
-    @media #{$lg} {
-      padding: 80px 30px;
-    }
-
-    @media #{$md} {
-      height: auto;
-      padding: 40px 30px;
-      display: flex;
-      justify-content: space-between;
-      gap: 50px;
-    }
-
-    @media #{$sm} {
-      padding: 35px 40px;
-    }
-
-    .content {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.5;
-      text-transform: uppercase;
-      color: var(--white);
-      border-bottom: 1px solid var(--gray-3);
-      padding-bottom: 40px;
-      margin-bottom: 40px;
-      position: relative;
-
-      @media #{$md} {
-        border-bottom: none;
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-      }
-
-      span {
-        display: block;
-        font-weight: 400;
-        font-size: 80px;
-        line-height: 1;
-        padding-bottom: 12px;
-
-        @media #{$md} {
-          font-size: 65px;
-        }
-      }
-    }
-
-    .work-process {
-      display: grid;
-      grid-template-columns: 100px auto;
-      position: relative;
-      z-index: 9;
-
-      @media #{$md} {
-        grid-template-columns: 1fr;
-        justify-items: center;
-      }
-
-      span {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-        text-transform: uppercase;
-        color: var(--white);
-        display: flex;
-        align-items: center;
-
-        @media #{$md} {
-          text-align: center;
-          margin-top: 2px;
-        }
-
-        br {
-          @media #{$md} {
-            display: none;
-          }
-        }
-      }
-
-      p {
-        font-size: 20px;
-        color: var(--primary);
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--black-2);
-        transition: all 0.5s;
-        @include zi(9);
-
-        &:hover {
-          color: var(--black-2);
-          background-color: var(--primary);
-        }
-      }
-    }
-  }
 
   .info {
     &-wrapper {
@@ -249,7 +144,7 @@
           display: inline-block;
           color: var(--black-2);
           font-weight: 500;
-          font-size: 26px;
+          font-size: 20px;
           line-height: 1;
           margin-top: 10px;
           text-transform: initial;
@@ -262,7 +157,6 @@
   .hello {
     margin-top: 30vh;
     height: calc(70vh + 130px);
-    background-color: var(--primary);
     margin-bottom: -130px;
     display: flex;
     align-items: flex-end;
@@ -283,7 +177,7 @@
 
   .title {
     font-weight: 600;
-    font-size: 90px;
+    font-size: 70px;
     line-height: 1;
     color: var(--white);
     padding-bottom: 30px;
@@ -358,6 +252,7 @@
   }
 
   .typed_title {
+    text-transform: capitalize;
     @media #{$sm} {
       font-size: 13px;
     }

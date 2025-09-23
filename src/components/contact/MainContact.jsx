@@ -49,7 +49,7 @@ export default function MainContact({ line = false, customPaddingClass }) {
       className={`contact-section ${customPaddingClass || ""}`}
       id="contact"
     >
-      <div className="container g-0 line pt-130 pb-130">
+      <div className="container g-0 line pt-130 pb-30">
         {line && (
           <div className="line-col-3">
             <div></div>

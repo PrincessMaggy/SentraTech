@@ -14,7 +14,10 @@ export default function Footer() {
       <div className="top">
         <div className="container g-0">
           <div className="row">
-            <div className="col-lg-3 col-sm-12 p-0" style={{ width: "auto" }}>
+            <div
+              className="col-lg-3 col-sm-12 p-0"
+              style={{ width: "auto", height: "40px" }}
+            >
               <div className="logo">
                 <Logo customWidth={70} customHeight={50} />
               </div>

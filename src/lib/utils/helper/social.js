@@ -1,5 +1,11 @@
 import Link from "next/link";
-import { FaYoutube, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa6";
+import {
+  FaYoutube,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+  FaFacebook,
+} from "react-icons/fa6";
 
 export const socialShare = (item) => {
   switch (item.name) {
@@ -21,10 +27,10 @@ export const socialShare = (item) => {
           <FaInstagram />
         </Link>
       );
-    case "Yt":
+    case "Fb":
       return (
         <Link href={item.link} target="_blank" key={item.link}>
-          <FaYoutube />
+          <FaFacebook />
         </Link>
       );
   }

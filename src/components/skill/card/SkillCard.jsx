@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { delayFunction } from "@/lib/utils/helper/delayFunction";
 
-export default function SkillCard1({ skill, i = 0 }) {
+export default function SkillCard({ skill, i = 0 }) {
   return (
     <div
       className="skill-card-1 has_fade_anim"

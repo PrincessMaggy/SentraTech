@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getSinglePage } from "@/lib/utils/helper/contentConverter";
 
 import SeoData from "@/components/common/SeoData";
-import PortfolioCard2 from "@/components/portfolio/card/PortfolioCard2";
+import PortfolioCard from "@/components/portfolio/card/PortfolioCard";
 import PortfolioDetails from "@/components/portfolio/details/PortfolioDetails";
 import Related1 from "@/components/related/Related1";
 
@@ -44,7 +44,7 @@ export default function DevPortfolioDetails({ params }) {
           <div className="pd-portfolio">
             <div className="flex">
               {related.slice(0, 3).map((item, i) => (
-                <PortfolioCard2
+                <PortfolioCard
                   key={`related_portfolio-card-${i}`}
                   smallItem={true}
                   portfolio={item}

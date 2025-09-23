@@ -1,20 +1,12 @@
 ---
-title: "Jackson Clark"
-sub_title: "Based in Germany"
-image: "/assets/imgs/hero/1.png"
-video: "https://www.youtube.com/watch?v=LckQ4VVjHDs"
+title: "SentraTech Institute"
+sub_title: "The Center for Future-Ready Innovation"
+image: "/assets/imgs/hero/hero.png"
 typed_title:
-  label: "A Web"
+  label: "Learn. Automate. Lead."
   text:
-    - "Designer"
-    - "Developer"
-    - "Programmer"
-email: "hello@joyamen.com"
-experience:
-  number: "10"
-  suffix: "+"
-shape:
-  enable: true
-  light_img: "/assets/imgs/common/dev-shape-1.png"
-  dark_img: "/assets/imgs/common/dev-shape-1-dark.png"
+    - "Business Automation"
+    - "Artificial Intelligence"
+    - "Soft Skills Development"
+email: "sentratechinstitute@gmail.com"
 ---

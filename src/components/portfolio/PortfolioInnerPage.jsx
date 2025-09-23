@@ -6,7 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { FaArrowRight } from "react-icons/fa6";
 
-import PortfolioCard2 from "./card/PortfolioCard2";
+import PortfolioCard from "./card/PortfolioCard";
 
 import { convertWithBrSpanImg } from "@/lib/utils/helper/converter";
 import hasCharAnim from "@/lib/utils/animation/hasCharAnim";
@@ -93,7 +93,7 @@ export default function PortfolioInnerPage({
   };
   return (
     <section className="pd-portfolio pt-70">
-      <div className="container line pt-120 pb-130">
+      <div className="container line pt-50 pb-30">
         <div className="sec-title-wrapper">
           <div className="pb-20">
             <h2 className="sec-sub-title" ref={charAnim}>
@@ -109,26 +109,10 @@ export default function PortfolioInnerPage({
 
         {filter_category && filter_category.length && (
           <>
-            <div className="btn-list" ref={btnAnim}>
-              {filter_category.map((category, i) => (
-                <Link
-                  key={`portfolio_category-${i}`}
-                  href={`portfolio?tab=${category}`}
-                >
-                  <button
-                    data-filter="all"
-                    className={isActive === category ? "active" : ""}
-                  >
-                    <span>{findNumber(category)}</span> {category}
-                  </button>
-                </Link>
-              ))}
-            </div>
-
             {portfolios && portfolios.length && (
               <div className="flex" ref={itemAnim}>
                 {portfolioData.map((portfolio, i) => (
-                  <PortfolioCard2
+                  <PortfolioCard
                     key={`portfolio_card-${i}`}
                     portfolio={portfolio}
                     rootUrl={rootUrl}
