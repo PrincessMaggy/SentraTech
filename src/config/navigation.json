@@ -5,8 +5,21 @@
       "path": "/"
     },
     {
+      "name": "Services",
+      "path": "/#services"
+    },
+    {
+      "name": "Portfolio",
+      "path": "/#portfolio"
+    },
+    {
       "name": "Contact",
       "path": "/contact"
+    },
+    {
+      "name": "Join Community",
+      "path": "#",
+      "isButton": true
     }
   ]
 }

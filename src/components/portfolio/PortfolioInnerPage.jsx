@@ -92,7 +92,7 @@ export default function PortfolioInnerPage({
     setPortfolioData(portfolios);
   };
   return (
-    <section className="pd-portfolio pt-70">
+    <section className="pd-portfolio pt-70" id="portfolio">
       <div className="container line pt-50 pb-30">
         <div className="sec-title-wrapper">
           <div className="pb-20">

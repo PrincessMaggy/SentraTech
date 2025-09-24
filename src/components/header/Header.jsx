@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { AppContext } from "@/context/app.context";
 
 import Logo from "../common/Logo";
-import Menu2 from "../menu/Menu2";
+import Menu from "../menu/Menu";
 import OffCanvas from "../offcanvas/OffCanvas";
 
 export default function Header({ headerData }) {
@@ -17,7 +17,7 @@ export default function Header({ headerData }) {
           <Logo />
         </div>
         <div className="nav">
-          <Menu2 navData={headerData} />
+          <Menu navData={headerData} />
         </div>
         <div className="others">
           <div className="navicon">

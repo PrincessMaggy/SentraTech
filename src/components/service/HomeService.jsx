@@ -30,7 +30,7 @@ export default function HomeService({
     hasFadeAnim(fadeAnim.current);
   }, []);
   return (
-    <section className="service-section">
+    <section className="service-section" id="services">
       <div className={`container g-0 line ${home ? "pt-120" : "pt-70 pb-30"}`}>
         {home && (
           <>

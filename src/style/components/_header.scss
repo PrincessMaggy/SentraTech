@@ -6,7 +6,6 @@
   top: 0;
   padding: 0 50px;
   z-index: 999;
-
   @media #{$lg} {
     padding: 15px 25px;
   }
@@ -20,8 +19,8 @@
   }
 
   .inner {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    display: flex;
+    // grid-template-columns: 1fr 5fr 1fr;
     gap: 100px;
     align-items: center;
     justify-content: space-between;
@@ -33,6 +32,7 @@
   }
 
   .nav {
+    width: 100%;
     @media #{$lg} {
       display: none;
     }
@@ -42,7 +42,7 @@
       > span {
         font-size: 20px;
         font-weight: 500;
-        padding: 50px 25px;
+        padding: 30px 25px;
       }
     }
 
@@ -65,7 +65,7 @@
     }
 
     .main-menu > ul {
-      justify-content: center;
+      justify-content: space-between;
     }
   }
 
