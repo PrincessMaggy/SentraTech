@@ -13,13 +13,8 @@
       "path": "/#portfolio"
     },
     {
-      "name": "Contact",
+      "name": "Contact Us",
       "path": "/contact"
-    },
-    {
-      "name": "Join Community",
-      "path": "#",
-      "isButton": true
     }
   ]
 }

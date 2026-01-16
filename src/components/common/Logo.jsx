@@ -37,24 +37,27 @@ export default function Logo({
               gap: "10px",
             }}
           >
-            <Image
-              width={customWidth || logo_width.replace("px", "") * 2}
-              height={customHeight || logo_height.replace("px", "") * 2}
-              src={path}
-              alt={title}
-              priority
-              style={{
-                height: customHeight || logo_height.replace("px", "") + "px",
-                width: customWidth || logo_width.replace("px", "") + "px",
-              }}
-            />
+            <div>
+              <Image
+                width={customWidth || logo_width.replace("px", "") * 2}
+                height={customHeight || logo_height.replace("px", "") * 2}
+                src={path}
+                alt={title}
+                priority
+                style={{
+                  height: customHeight || logo_height.replace("px", "") + "px",
+                  width: customWidth || logo_width.replace("px", "") + "px",
+                }}
+              />
+            </div>
             <p
               style={{
-                color: "#1E90FF",
+                color: "#FFF",
                 fontWeight: "500",
+                fontSize: "15px",
               }}
             >
-              SentraTech <br /> Institute
+              SentraTech Institute
             </p>
           </div>
         ) : logo_text ? (
