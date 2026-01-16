@@ -10,14 +10,14 @@
     "base_url": "",
     "favicon": "/assets/imgs/logo/logo3.png",
     "logo": "/assets/imgs/logo/white_logo.png",
-    "logo3": "/assets/imgs/logo/logo.png",
+    "logo3": "/assets/imgs/logo/blue_logo.png",
     "logo_dark": "/assets/imgs/logo/logo.png",
     "logo_width": "60",
     "logo_height": "50",
     "whitelogo": "/assets/imgs/logo/logo.png",
     "logo_dark2": "/assets/imgs/logo/logo.png",
-    "logo_width2": "50",
-    "logo_height2": "25",
+    "logo_width2": "60",
+    "logo_height2": "50",
     "logo_text": "SentraTech Institute"
   },
   "footer_info": {
