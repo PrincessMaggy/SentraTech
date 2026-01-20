@@ -1,34 +1,14 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import siteConfig from "@/config/siteConfig.json";
 
 import Typed from "typed.js";
-import { FaPlay } from "react-icons/fa6";
-
-import VideoModal from "../common/VideoModal";
-import ImageComponent from "../common/ImageComponent";
-
-import { socialShare } from "@/lib/utils/helper/social";
 import hasFadeAnim from "@/lib/utils/animation/hasFadeAnim";
 import hasTextRevealAnim from "@/lib/utils/animation/hasTextRevealAnim";
 import hasTextMoveAnim from "@/lib/utils/animation/hasTextMoveAnim";
 
 export default function HomeHero({ hero = undefined }) {
-  const [modalShow, setModalShow] = useState(false);
-  const { social } = siteConfig;
-  const {
-    title,
-    sub_title,
-    image,
-    video,
-    typed_title,
-    email,
-    experience,
-    shape,
-  } = hero?.frontmatter || {};
+  const { title, sub_title, typed_title } = hero?.frontmatter || {};
 
   const typed = useRef();
   const typeList = useRef();
@@ -64,7 +44,7 @@ export default function HomeHero({ hero = undefined }) {
   return (
     <section className="hero">
       <div className="container g-0 line">
-        <div className="line-col-3">
+        <div className="col-3">
           <div></div>
           <div></div>
           <div></div>
@@ -85,11 +65,17 @@ export default function HomeHero({ hero = undefined }) {
                 </div>
 
                 <div data-on-scroll="0" data-delay="0.8" ref={textMoveAnim}>
-                  <p className="color-primary">{sub_title}</p>
+                  <p className="" style={{ color: "var(--white)" }}>
+                    {sub_title}
+                  </p>
                 </div>
               </div>
-              <div className="pb-20" ref={fadeAnim1} data-on-scroll="0">
-                <h1 className="typed_title color-secondary">
+              <div
+                className="pb-30 mt-20 mb-30"
+                ref={fadeAnim1}
+                data-on-scroll="0"
+              >
+                <h1 className="typed_title">
                   <span id="typed_list" ref={typeList}>
                     {typed_title.text && typed_title.text.length
                       ? typed_title.text.map((item, i) => (
@@ -99,49 +85,6 @@ export default function HomeHero({ hero = undefined }) {
                   </span>
                   <span id="typed" ref={typed}></span>
                 </h1>
-              </div>
-
-              {social && social.length && (
-                <div
-                  className="follow"
-                  ref={fadeAnim2}
-                  data-on-scroll="0"
-                  data-delay=".8"
-                >
-                  <div className="social">
-                    <h3 className="follow-me">Follow Me</h3>
-                    <ul className="hover-zoom">
-                      {social.map((item, i) => (
-                        <li key={`hero_social_link-${i}`}>
-                          {socialShare(item)}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-          <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-6">
-            <div className="right">
-              <div className="hero-img">
-                <Image
-                  width={690}
-                  height={820}
-                  style={{ height: "auto" }}
-                  priority
-                  src={image}
-                  className="jh-img"
-                  alt="Hero image"
-                />
-              </div>
-              <div className="info-wrapper">
-                <div className="hello" ref={fadeAnim3}>
-                  <div className="say_hello ">
-                    <p>Say hello!</p>
-                    <Link href={`mailto:${email}`}>{email}</Link>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

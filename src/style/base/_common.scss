@@ -484,7 +484,7 @@
         color: var(--white) !important;
         text-indent: 40px;
         line-height: 1.1;
-        text-transform: uppercase;
+    text-transform: capitalize;
 
         @media #{$md} {
           font-size: 40px;

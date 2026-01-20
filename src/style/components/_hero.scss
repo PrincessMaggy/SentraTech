@@ -1,7 +1,13 @@
 
 .hero {
   position: relative;
-
+background: 
+    linear-gradient( to right,
+     var(--primarybg),  
+      rgba(0, 0, 0, 0.5)   
+    ),
+    url('/assets/imgs/hero/hero.png') center/cover no-repeat;
+  // background-blend-mode: overlay;
   .row {
     @media #{$md} {
       margin-top: 13vh;
@@ -9,6 +15,7 @@
 
     @media #{$sm} {
       margin-top: 0px;
+
     }
   }
 
@@ -137,7 +144,6 @@
           font-size: 14px;
           line-height: 1.5;
           color: var(--black-2);
-          text-transform: uppercase;
         }
 
         a {
@@ -177,12 +183,11 @@
 
   .title {
     font-weight: 600;
-    font-size: 70px;
+    font-size: 50px;
     line-height: 1;
     color: var(--white);
     padding-bottom: 30px;
-    text-transform: uppercase;
-
+    text-transform: capitalize;
     @media #{$xl} {
       font-size: 80px;
     }
@@ -201,7 +206,7 @@
     }
 
     @include light {
-      color: var(--black-2);
+    color: var(--white);
     }
   }
 
@@ -223,36 +228,14 @@
       margin-inline-start: 0;
     }
 
-    .social {
-      padding: 10px 20px;
-      border-inline-start: 1px solid var(--black-6);
-
-      @media #{$sm} {
-        // padding: 7px 12px;
-        display: none;
-      }
-
-      @include light {
-        border-color: var(--gray-4);
-      }
-
-      .follow-me {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-        color: var(--gray-4);
-        padding-bottom: 20px;
-        text-transform: uppercase;
-      }
-
-      li {
-        @include social_media(var(--black-9), var(--primary));
-      }
-    }
+  
   }
 
   .typed_title {
     text-transform: capitalize;
+    color: var(--white);
+      font-size: 16px;
+    
     @media #{$sm} {
       font-size: 13px;
     }
@@ -290,7 +273,6 @@
     font-weight: 600;
     line-height: 1.1;
     color: var(--white);
-    text-transform: uppercase;
     font-family: $font_estedad;
 
     @include light {
