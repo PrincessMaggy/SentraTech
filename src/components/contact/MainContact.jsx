@@ -28,7 +28,7 @@ export default function MainContact({ line = false, customPaddingClass }) {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
@@ -40,7 +40,7 @@ export default function MainContact({ line = false, customPaddingClass }) {
           console.error(error);
           toast.error("Failed to send. Please try again.");
           setIsSending(false);
-        }
+        },
       );
   };
 
@@ -49,7 +49,7 @@ export default function MainContact({ line = false, customPaddingClass }) {
       className={`contact-section ${customPaddingClass || ""}`}
       id="contact"
     >
-      <div className="container g-0 line pt-130 pb-30">
+      <div className="container g-0 line pt-130 pb-80 m-0">
         {line && (
           <div className="line-col-3">
             <div></div>
@@ -58,29 +58,38 @@ export default function MainContact({ line = false, customPaddingClass }) {
           </div>
         )}
 
-        <div className="row">
+        <div
+          className="row pl-15"
+          style={{ maxWidth: "100vw !important", width: "100vw !important" }}
+        >
           <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-6">
             <div className="left">
               <div className="sec-title-wrapper">
-                <h3 className="sec-title">Get in Touch</h3>
+                <h3 className="sec-title">
+                  Get in touch <br />
+                  with us
+                </h3>
+                <p className="sec-p mt-2">
+                  If you have any questions, complaints, need assistance or want
+                  to provide feedback, reach out to us via email or fill the
+                  form.
+                </p>
               </div>
               <div className="grid">
                 <div className="type">
-                  <div className="icon">
-                    <FaPaperPlane />
-                  </div>
                   <div>
-                    <h4 className="name">Email</h4>
-                    <Link href={`mailto:${email}`}>{email}</Link>
+                    <h4 className="nameT">Email</h4>
+                    <Link href={`mailto:${email}`} className="name">
+                      {email}
+                    </Link>
                   </div>
                 </div>
                 <div className="type">
-                  <div className="icon">
-                    <FaLocationDot />
-                  </div>
                   <div>
-                    <h4 className="name">Address</h4>
-                    <Link href={address.link}>{address.name}</Link>
+                    <h4 className="nameT">Address</h4>
+                    <Link href={address.link} className="name">
+                      {address.name}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -89,13 +98,17 @@ export default function MainContact({ line = false, customPaddingClass }) {
           <div className="col-xxl-7 col-xl-7 col-lg-6 col-md-6">
             <div className="right">
               <div className="form">
-                <form ref={form} onSubmit={handleSubmit(sendEmail)}>
+                <form
+                  ref={form}
+                  onSubmit={handleSubmit(sendEmail)}
+                  className="p-3"
+                >
                   <div className="input-item">
-                    <label htmlFor="user_name">Name</label>
+                    <label htmlFor="user_name">Full Name</label>
                     <input
                       name="name"
                       type="text"
-                      placeholder="Name*"
+                      placeholder="Enter your full name"
                       {...register("name", {
                         required: "Name is required",
                         maxLength: {
@@ -111,7 +124,7 @@ export default function MainContact({ line = false, customPaddingClass }) {
                     <input
                       name="email"
                       type="email"
-                      placeholder="Email*"
+                      placeholder="Enter your email address"
                       {...register("email", {
                         required: "Email address is required",
                         pattern: {
@@ -124,11 +137,11 @@ export default function MainContact({ line = false, customPaddingClass }) {
                     {errors.email && <p role="alert">{errors.email.message}</p>}
                   </div>
                   <div className="input-item">
-                    <label htmlFor="user_mobile">Phone</label>
+                    <label htmlFor="user_mobile">Phone Number</label>
                     <input
                       name="contact"
                       type="number"
-                      placeholder="Phone*"
+                      placeholder="Enter your phone number"
                       {...register("contact", {
                         required: "Mobile number is required",
                       })}
@@ -142,7 +155,7 @@ export default function MainContact({ line = false, customPaddingClass }) {
                     <input
                       type="text"
                       name="title"
-                      placeholder="Subject*"
+                      placeholder="Enter the subject of the message"
                       {...register("subject", {
                         required: "Subject is required",
                         maxLength: {
@@ -156,10 +169,10 @@ export default function MainContact({ line = false, customPaddingClass }) {
                     )}
                   </div>
                   <div className="input-item full">
-                    <label htmlFor="user_message">Message</label>
+                    <label htmlFor="user_message">How can we help you?</label>
                     <textarea
                       name="message"
-                      placeholder="Messages*"
+                      placeholder="Enter your message"
                       {...register("message", {
                         required: "Message is required",
                       })}
@@ -168,7 +181,7 @@ export default function MainContact({ line = false, customPaddingClass }) {
                       <p role="alert">{errors.message.message}</p>
                     )}
                   </div>
-                  <div className="input-item submit">
+                  <div className="input-item submit full d-flex justify-content-end">
                     <button
                       type="submit"
                       className="btn-hover-mask"
@@ -180,7 +193,7 @@ export default function MainContact({ line = false, customPaddingClass }) {
                         </span>
                       ) : (
                         <>
-                          Submit <FaArrowRight />
+                          Send Message <FaArrowRight />
                         </>
                       )}
                     </button>

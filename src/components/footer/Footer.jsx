@@ -20,11 +20,9 @@ export default function Footer() {
           </div>
           <div className="col-12 p-0">
             <div className="info p-4 mt-3">
-              <div>
-                <Link href={`mailto:${email}`} className="link">
-                  <FaEnvelope /> {email}
-                </Link>
-              </div>
+              <Link href={`mailto:${email}`} className="link">
+                <FaEnvelope /> {email}
+              </Link>
               {social && social.length && (
                 <div className="social">
                   <ul className="hover-zoom">
