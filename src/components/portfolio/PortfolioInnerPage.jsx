@@ -20,7 +20,8 @@ export default function PortfolioInnerPage({
   portfolios,
   rootUrl = "",
 }) {
-  const { sec_name, sec_title, filter_category } = portfolio?.frontmatter || {};
+  const { sec_name, sec_title, filter_category, short_description } =
+    portfolio?.frontmatter || {};
 
   const [mainData, setMainData] = useState(portfolios.slice(0, 7));
   const [portfolioData, setPortfolioData] = useState(mainData);
@@ -51,15 +52,15 @@ export default function PortfolioInnerPage({
           } else {
             let result = mainData.filter((el) =>
               el.frontmatter.category.find(
-                (cat) => cat.toLowerCase() === data.toLowerCase()
-              )
+                (cat) => cat.toLowerCase() === data.toLowerCase(),
+              ),
             );
             setPortfolioData(result);
           }
         }
       });
     },
-    [filter_category, mainData, portfolios]
+    [filter_category, mainData, portfolios],
   );
 
   useEffect(() => {
@@ -75,8 +76,8 @@ export default function PortfolioInnerPage({
     } else {
       result = portfolios.filter((el) =>
         el.frontmatter.category.find(
-          (cat) => cat.toLowerCase() === data.toLowerCase()
-        )
+          (cat) => cat.toLowerCase() === data.toLowerCase(),
+        ),
       );
     }
 
@@ -94,7 +95,7 @@ export default function PortfolioInnerPage({
   return (
     <section className="pd-portfolio pt-70" id="portfolio">
       <div className="container line pt-50 pb-30">
-        <div className="sec-title-wrapper">
+        <div className="sec-title-wrapper col-md-6">
           <div className="pb-20">
             <h2 className="sec-sub-title" ref={charAnim}>
               {sec_name}
@@ -104,6 +105,9 @@ export default function PortfolioInnerPage({
             className="sec-title"
             ref={textRevealAnim}
             dangerouslySetInnerHTML={convertWithBrSpanImg(sec_title)}
+          />
+          <p
+            dangerouslySetInnerHTML={convertWithBrSpanImg(short_description)}
           />
         </div>
 

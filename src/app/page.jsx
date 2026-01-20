@@ -10,7 +10,7 @@ import HomePortfolio from "@/components/portfolio/HomePortfolio";
 import HomeService from "@/components/service/HomeService";
 import HomeSkill from "@/components/skill/HomeSkill";
 import PortfolioInnerPage from "@/components/portfolio/PortfolioInnerPage";
-
+import JoinCommunityCTA from "@/components/cta/JoinCommunityCTA";
 export default function Home() {
   const hero = getListPage("/heros/hero.md");
   const skill = getListPage("/skills/skill.md");
@@ -40,6 +40,7 @@ export default function Home() {
         portfolios={portfolios}
         rootUrl="/"
       />
+      <JoinCommunityCTA />
     </main>
   );
 }

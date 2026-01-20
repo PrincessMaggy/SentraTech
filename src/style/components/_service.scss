@@ -55,6 +55,8 @@
 // Service Section
 
 .service-section {
+      background-color: var(--gray-13);
+
   .sec {
     &-title {
       @media #{$sm} {
