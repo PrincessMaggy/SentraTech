@@ -53,7 +53,7 @@ export default function HomeHero({ hero = undefined }) {
           <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-6">
             <div className="left">
               <div className="title-area">
-                <div className="pb-0">
+                <div className="pb-2">
                   <h2
                     className="title"
                     data-on-scroll="0"

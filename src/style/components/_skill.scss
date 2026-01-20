@@ -37,10 +37,13 @@ background-color: var(--white);
 
     @media #{$md} {
       grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
     }
 
     @media #{$sm} {
       grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
     }
   }
 }
