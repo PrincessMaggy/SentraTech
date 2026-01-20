@@ -1,37 +1,33 @@
 // Service Card
 
 .service-card-1 {
-  padding: 50px 40px;
+  padding: 20px 20px;
   background-color: var(--black-4);
+  border-radius: 12px;
 
   @include light {
     background-color: var(--white-2);
   }
 
   @media #{$xl} {
-    padding: 40px 25px;
+    padding: 20px 15px;
   }
 
   @media #{$lg} {
-    padding: 40px 15px;
+    padding: 20px 15px;
   }
 
   @media #{$md} {
-    padding: 50px 40px;
+    padding: 20px 20px;
   }
 
-  &:hover {
-    .title {
-      color: var(--primary);
-    }
-  }
-
+ 
   .title {
     font-size: 26px;
     font-weight: 600;
     line-height: 1.1;
-    padding-bottom: 80px;
-    text-transform: uppercase;
+    padding-bottom: 10px;
+    text-transform: capitalize;
     transition: all 0.3s;
 
     @media #{$lg} {
@@ -45,14 +41,14 @@
   }
 
   .icon {
-    margin-bottom: 75px;
+    margin-bottom: 15px;
 
     @media #{$lg} {
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
 
     @media #{$sm} {
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
   }
 }
@@ -110,7 +106,7 @@
       font-size: 170px;
       line-height: 1;
       font-weight: 400;
-      text-transform: uppercase;
+      text-transform: capitalize;
 
       @media #{$xxl} {
         font-size: 140px;
@@ -210,7 +206,7 @@
 
     .other-title {
       font-size: 30px;
-      text-transform: uppercase;
+      text-transform: capitalize;
 
       @media #{$md} {
         font-size: 20px;
@@ -350,5 +346,29 @@
         }
       }
     }
+  }
+}
+
+
+.service-card-1 {
+  background-color: var(--black-4);
+  color: var(--white);
+
+  &:nth-child(1) { background-color: #1e1e2f; }
+  &:nth-child(2) { background-color: #2a1f1f; }
+  &:nth-child(3) { background-color: #1f2a24; }
+  &:nth-child(4) { background-color: #2a2420; }
+
+  @include light {
+    &:nth-child(1) { background-color: rgba(238, 238, 238, 1); }
+    &:nth-child(2) { background-color: rgba(255, 178, 30, 1); }
+  &:nth-child(3) { background-color: rgba(255, 30, 111, 1);
+    h2,p{
+    color: var(--white) !important; 
+    }
+  }
+  &:nth-child(4) { background-color: rgba(30, 144, 255, 1);  h2,p{
+    color: var(--white) !important; 
+    }}
   }
 }

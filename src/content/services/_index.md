@@ -2,7 +2,7 @@
 # service section
 
 sec_name: "Services"
-sec_title: "What We Offer <br> at SentraTech"
+sec_title: "What We Offer at SentraTech"
 inner_title: "Learn. <br> Automate. <br> Lead."
 short_details: "We empower learners and organizations with future-ready skills in automation, artificial intelligence, and leadership, blending technology with human-centered values."
 content:

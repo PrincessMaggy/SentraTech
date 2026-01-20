@@ -34,7 +34,7 @@ export default function HomeService({
       <div className={`container g-0 line ${home ? "pt-120" : "pt-70 pb-30"}`}>
         {home && (
           <>
-            <div className="line-col-3">
+            <div className="col-3">
               <div></div>
               <div></div>
               <div></div>
@@ -52,13 +52,9 @@ export default function HomeService({
                     ref={textRevealAnim}
                     dangerouslySetInnerHTML={convertWithBrSpanImg(sec_title)}
                   />
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="sec-text-width" ref={textMoveAnim}>
                   <p
                     dangerouslySetInnerHTML={convertWithBrSpanImg(
-                      short_details
+                      short_details,
                     )}
                   />
                 </div>

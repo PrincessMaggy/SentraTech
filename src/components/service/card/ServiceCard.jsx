@@ -12,14 +12,16 @@ export default function ServiceCard({ service = undefined, i = 0 }) {
       data-delay={delayFunction(i + 1)}
     >
       <div>
+        <div className="icon">
+          <Image width={500} height={200} src={image} alt="Icon" />
+        </div>
         <h2
           className="title"
           dangerouslySetInnerHTML={convertWithBrSpanImg(title)}
         />
-        <div className="icon">
-          <Image width={90} height={90} src={image} alt="Icon" />
-        </div>
-        <p className="desc">{short_description}</p>
+        <p className="desc" style={{ color: "var(--gray1)" }}>
+          {short_description}
+        </p>
       </div>
     </div>
   );
