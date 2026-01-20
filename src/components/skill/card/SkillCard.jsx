@@ -17,8 +17,8 @@ export default function SkillCard({ skill, i = 0 }) {
         src={skill.image}
         alt="Skill Icon"
       />
+      <h5 className="title pb-10">{skill.name}</h5>
       <h4 className="percentage wc-counter">{skill.percentage}%</h4>
-      <h5 className="title">{skill.name}</h5>
     </div>
   );
 }

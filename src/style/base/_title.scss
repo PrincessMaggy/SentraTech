@@ -2,7 +2,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  text-transform: uppercase;
   color: var(--primary);
   @include zi(1);
 
@@ -89,15 +88,15 @@
   @include zi(1);
 
   @media #{$xl} {
-    font-size: 36px;
+    font-size: 22px;
   }
 
   @media #{$lg} {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   @media #{$sm} {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   &-2 {

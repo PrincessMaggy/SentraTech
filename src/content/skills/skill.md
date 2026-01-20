@@ -10,7 +10,7 @@ skills:
   - image: "/assets/imgs/skill/2.png"
     percentage: "95"
     name: "Artificial Intelligence"
-  - image: "/assets/imgs/skill/3.png"
+  - image: "/assets/imgs/skill/1.png"
     percentage: "86"
     name: "Soft Skills & Leadership"
   - image: "/assets/imgs/skill/4.png"

@@ -23,22 +23,26 @@ export default function HomeSkill({ skill = undefined }) {
 
   return (
     <section className="skill">
-      <div className="container g-0 line pb-20 pt-30">
-        <div className="line-col-3">
+      <div className="container g-0 line pb-20 pt-10">
+        <div className="col-3">
           <div></div>
           <div></div>
           <div></div>
         </div>
         <div>
           <div className="sec-title-wrapper">
-            <div className="pb-20">
-              <h2 className="sec-sub-title" ref={textRevealAnim}>
+            <div className="pb-10">
+              <h2
+                className="sec-sub-title"
+                style={{ textAlign: "left" }}
+                ref={textRevealAnim}
+              >
                 {sec_name}
               </h2>
             </div>
-            <h3 className="sec-title" ref={textMoveAnim}>
+            <h5 className="sec-title" ref={textMoveAnim}>
               {title}
-            </h3>
+            </h5>
           </div>
           {skills && skills.length && (
             <div className="grid-3" ref={fadeAnim}>
