@@ -61,7 +61,7 @@
     min-width: 320px;
     position: relative; 
     padding: 0; // Remove card padding for flush layout
-    overflow: hidden; // Crop image corners
+    // overflow: hidden; // REMOVED to allow arrow to extend
     
   @media #{$sm} {
     flex-direction: column; 
@@ -90,7 +90,7 @@
     transition: transform 0.3s ease;
 
     img {
-      border-radius: 0; // Flush edges
+      border-radius: 16px 0 0 16px; // Manual flush edges (Desktop)
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -102,10 +102,18 @@
         width: 100%; 
         height: 250px; // Fixed height for mobile
         margin-bottom: 0;
+        
+        img {
+            border-radius: 16px 16px 0 0; // Manual flush edges (Mobile)
+        }
     }
      @media #{$md} {
         width: 100%;
         height: 300px;
+        
+        img {
+            border-radius: 16px 16px 0 0;
+        }
     }
   }
 
