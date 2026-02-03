@@ -11,9 +11,9 @@
       padding: 20px;
   }
   .arrow-wrap {
-    width: 160px; // Massive size as requested (approx 2x prominence)
-    height: 160px;
-    border-radius: 30px; 
+    width:200px; // Massive size as requested (approx 2x prominence)
+    height: 200px;
+    border-radius: 20px; 
     background-color: var(--primary); 
     border: 15px solid var(--gray-13); // Thick border to match bg
     display: flex;
@@ -22,7 +22,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(30%, -30%);
+    transform: translate(10%, -10%);
     transition: all 0.3s ease;
     cursor: pointer;
     z-index: 10;
@@ -53,30 +53,29 @@
   }
   .cta-card {
     display: flex;
-    align-items: center;
-    gap: 30px;
+    align-items: stretch; // Ensure equal height for flush image
+    justify-content: center; 
+    gap: 0; // Remove gap, handle spacing via padding
     background-color: var(--black-4);
     border-radius: 16px;
-    min-width: 420px;
+    min-width: 320px;
     position: relative; 
-    padding-right: 160px; // Balance the 160px arrow
+    padding: 0; // Remove card padding for flush layout
+    overflow: hidden; // Crop image corners
     
   @media #{$sm} {
     flex-direction: column; 
-    align-items: flex-start;
-    padding: 10px;
-    padding-right: 10px; // Reset padding on mobile
+    align-items: stretch; 
+    text-align: center; 
+    padding: 0; 
     min-width: 150px;
-    padding-top: 40px; // Add top padding to clear the arrow on mobile if needed
 }
 
   @media #{$md} {
     flex-direction: column; 
-    align-items: flex-start;
-    padding: 10px;
-    padding-right: 10px;
+    align-items: stretch;
+    padding: 0;
     min-width: 150px;
-    padding-top: 40px;
 }
     @include light {
       background-color: var(--primary);
@@ -85,28 +84,48 @@
 
   .cta-image {
     flex-shrink: 0;
-    margin-left: 0; // Reset margin
+    width: 35%; // Allocate width for image
+    position: relative;
+    margin-left: 0;
     transition: transform 0.3s ease;
 
     img {
-      border-radius: 12px;
+      border-radius: 0; // Flush edges
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      object-position: top center; // Ensure face is visible
-      box-shadow: 10px 10px 30px rgba(0,0,0,0.15); 
+      object-position: top center; 
+      box-shadow: none; // Remove shadow as it's flush
     }
 
     @media #{$sm} {
-        margin-bottom: 20px;
         width: 100%; 
-        
-        img {
-            width: 100%;
-            height: auto;
-        }
+        height: 250px; // Fixed height for mobile
+        margin-bottom: 0;
+    }
+     @media #{$md} {
+        width: 100%;
+        height: 300px;
     }
   }
 
   .cta-content {
+    flex: 1; // Take remaining space
+    padding: 80px 160px 80px 40px; // Add the padding here
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media #{$sm} {
+       padding: 40px 20px 60px 20px; // Mobile padding
+       align-items: center;
+    }
+     @media #{$md} {
+       padding: 40px 20px 60px 20px;
+       align-items: center;
+       text-align: center;
+    }
+
     .label {
       font-size: 32px;
       letter-spacing: 1px;

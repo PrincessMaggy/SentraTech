@@ -49,7 +49,7 @@ export default function MainContact({ line = false, customPaddingClass }) {
       className={`contact-section ${customPaddingClass || ""}`}
       id="contact"
     >
-      <div className="container g-0 line pt-130 pb-80 m-0">
+      <div className="container g-0 line pt-130 pb-80">
         {line && (
           <div className="line-col-3">
             <div></div>
@@ -58,10 +58,7 @@ export default function MainContact({ line = false, customPaddingClass }) {
           </div>
         )}
 
-        <div
-          className="row pl-15"
-          style={{ maxWidth: "100vw !important", width: "100vw !important" }}
-        >
+        <div className="row">
           <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-6">
             <div className="left">
               <div className="sec-title-wrapper">
