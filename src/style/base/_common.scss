@@ -58,12 +58,10 @@
         color: #183c4f;
       }
 
-      .text_invert > div {
-        background-image: linear-gradient(
-          to right,
-          #183c4f 50%,
-          rgba(66, 60, 60, 0.5) 50%
-        ) !important;
+      .text_invert>div {
+        background-image: linear-gradient(to right,
+            #183c4f 50%,
+            rgba(66, 60, 60, 0.5) 50%) !important;
       }
 
       h1,
@@ -87,6 +85,7 @@
   }
 
   &-motivational-speaker {
+
     h1,
     h2,
     h3,
@@ -180,12 +179,15 @@
     &::-webkit-scrollbar-track {
       background: #d6d6d6;
     }
+
     &::-webkit-scrollbar-thumb {
       background: #888;
     }
+
     &::-webkit-scrollbar-thumb:hover {
       background: #555;
     }
+
     @media #{$sm} {
       padding: 0;
     }
@@ -484,7 +486,7 @@
         color: var(--white) !important;
         text-indent: 40px;
         line-height: 1.1;
-    text-transform: capitalize;
+        text-transform: capitalize;
 
         @media #{$md} {
           font-size: 40px;
@@ -561,11 +563,9 @@
 }
 
 .text_invert div {
-  background: linear-gradient(
-    to right,
-    rgb(255, 255, 255) 50%,
-    rgb(66 60 60) 50%
-  );
+  background: linear-gradient(to right,
+      rgb(255, 255, 255) 50%,
+      rgb(66 60 60) 50%);
   background-size: 200% 100%;
   background-position-x: 100%;
   color: transparent;
@@ -573,11 +573,9 @@
   -webkit-background-clip: text;
 
   @include light {
-    background-image: linear-gradient(
-      to right,
-      rgb(0, 0, 0) 50%,
-      rgb(66 60 60 / 50%) 50%
-    );
+    background-image: linear-gradient(to right,
+        rgb(0, 0, 0) 50%,
+        rgb(66 60 60 / 50%) 50%);
   }
 }
 
@@ -593,6 +591,7 @@
     background-color: #f6f3f0 !important;
   }
 }
+
 .change-bg-2 {
   @include light {
     background-color: #ededed !important;

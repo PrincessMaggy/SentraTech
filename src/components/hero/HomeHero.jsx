@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import Typed from "typed.js";
+import Marquee from "react-fast-marquee";
 import hasFadeAnim from "@/lib/utils/animation/hasFadeAnim";
 import hasTextRevealAnim from "@/lib/utils/animation/hasTextRevealAnim";
 import hasTextMoveAnim from "@/lib/utils/animation/hasTextMoveAnim";
@@ -10,27 +10,11 @@ import hasTextMoveAnim from "@/lib/utils/animation/hasTextMoveAnim";
 export default function HomeHero({ hero = undefined }) {
   const { title, sub_title, typed_title } = hero?.frontmatter || {};
 
-  const typed = useRef();
-  const typeList = useRef();
-
   const fadeAnim1 = useRef("");
   const fadeAnim2 = useRef("");
   const fadeAnim3 = useRef("");
   const textRevealAnim = useRef("");
   const textMoveAnim = useRef("");
-
-  useEffect(() => {
-    var hero_1 = new Typed(typed.current, {
-      stringsElement: typeList.current,
-      typeSpeed: 50,
-      backSpeed: 50,
-      cursorChar: "|",
-      loop: true,
-    });
-    return () => {
-      hero_1.destroy();
-    };
-  }, []);
 
   useEffect(() => {
     hasFadeAnim(fadeAnim1.current);
@@ -71,20 +55,19 @@ export default function HomeHero({ hero = undefined }) {
                 </div>
               </div>
               <div
-                className="pb-30 mt-20 mb-30"
+                className="pb-30 mt-20 mb-30 marquee_container"
                 ref={fadeAnim1}
                 data-on-scroll="0"
               >
-                <h1 className="typed_title">
-                  <span id="typed_list" ref={typeList}>
-                    {typed_title.text && typed_title.text.length
-                      ? typed_title.text.map((item, i) => (
-                          <span key={`type_list-${i}`}>{item}</span>
-                        ))
-                      : ""}
-                  </span>
-                  <span id="typed" ref={typed}></span>
-                </h1>
+                {typed_title?.text && (
+                  <Marquee speed={50} gradient={false} loop={0}>
+                    {typed_title.text.map((item, i) => (
+                      <span key={i} className="marquee_text">
+                         • {item}
+                      </span>
+                    ))}
+                  </Marquee>
+                )}
               </div>
             </div>
           </div>

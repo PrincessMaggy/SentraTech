@@ -17,4 +17,14 @@ main_content:
 meta:
   meta_title: "SentraTech Community Launch"
   meta_description: "An upcoming SentraTech initiative to build a collaborative learning community."
+benefits:
+  - "Network with like-minded professionals"
+  - "Access exclusive events and webinars"
+  - "Collaborate on open-source projects"
+  - "Mentorship opportunities"
+outline:
+  - "Phase 1: Forum Launch"
+  - "Phase 2: Weekly Community Calls"
+  - "Phase 3: Hackathons & Challenges"
+  - "Phase 4: Annual Conference"
 ---

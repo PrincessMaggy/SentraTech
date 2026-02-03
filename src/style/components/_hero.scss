@@ -1,21 +1,28 @@
-
 .hero {
   position: relative;
-background: 
-    linear-gradient( to right,
-     var(--primarybg),  
-      rgba(0, 0, 0, 0.5)   
-    ),
+  background:
+    linear-gradient(to right,
+      var(--primarybg),
+      rgba(0, 0, 0, 0.5)),
     url('/assets/imgs/hero/hero.png') center/cover no-repeat;
+      height: auto;
+
   // background-blend-mode: overlay;
   .row {
     @media #{$md} {
       margin-top: 13vh;
+
+    }
+
+    @media #{$lg} {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
     }
 
     @media #{$sm} {
       margin-top: 0px;
-
+      height: 60vh;
     }
   }
 
@@ -188,6 +195,7 @@ background:
     color: var(--white);
     padding-bottom: 30px;
     text-transform: capitalize;
+
     @media #{$xl} {
       font-size: 80px;
     }
@@ -206,7 +214,7 @@ background:
     }
 
     @include light {
-    color: var(--white);
+      color: var(--white);
     }
   }
 
@@ -228,16 +236,53 @@ background:
       margin-inline-start: 0;
     }
 
-  
+
   }
 
-  .typed_title {
-    text-transform: capitalize;
-    color: var(--white);
-      font-size: 16px;
-    
-    @media #{$sm} {
-      font-size: 13px;
+  .marquee_container {
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+    padding: 10px 20px;
+
+    mask-image: linear-gradient(to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent);
+    -webkit-mask-image: linear-gradient(to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      transform: skewX(-10deg);
+      border-radius: 12px;
+      // Ensure left side isn't noticeably slanted or gap-y if not desired
+      // but skewX(-10deg) naturally slants the box. 
+      // User asked for "right border slanted", this gives that boxy-slant shape.
+    }
+
+    .marquee_text {
+      text-transform: none;
+      color: var(--white);
+      font-size: 20px;
+      margin-right: 40px;
+      font-weight: 400;
+      white-space: nowrap;
+      display: inline-block;
+
+      @media #{$sm} {
+        font-size: 18px;
+        margin-right: 20px;
+      }
     }
   }
 }
@@ -384,4 +429,3 @@ background:
     }
   }
 }
-

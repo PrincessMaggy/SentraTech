@@ -7,6 +7,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
 import PortfolioCard from "./card/PortfolioCard";
+import PortfolioModal from "./PortfolioModal";
 
 import { convertWithBrSpanImg } from "@/lib/utils/helper/converter";
 import hasCharAnim from "@/lib/utils/animation/hasCharAnim";
@@ -26,6 +27,8 @@ export default function PortfolioInnerPage({
   const [mainData, setMainData] = useState(portfolios.slice(0, 7));
   const [portfolioData, setPortfolioData] = useState(mainData);
   const [isActive, setIsActive] = useState(filter_category[0]);
+  const [selectedPortfolio, setSelectedPortfolio] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const charAnim = useRef("");
   const textRevealAnim = useRef("");
@@ -120,6 +123,10 @@ export default function PortfolioInnerPage({
                     key={`portfolio_card-${i}`}
                     portfolio={portfolio}
                     rootUrl={rootUrl}
+                    onClick={() => {
+                        setSelectedPortfolio(portfolio);
+                        setIsModalOpen(true);
+                    }}
                   />
                 ))}
               </div>
@@ -140,6 +147,11 @@ export default function PortfolioInnerPage({
           </div>
         )}
       </div>
+      <PortfolioModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        portfolio={selectedPortfolio} 
+      />
     </section>
   );
 }

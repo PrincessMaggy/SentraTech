@@ -61,7 +61,7 @@
     line-height: 1.8;
     color: var(--gray1);
     text-transform: uppercase;
- 
+
   }
 
   .title {
@@ -82,23 +82,74 @@
 .portfolio-card1-small {
   overflow: hidden;
   position: relative;
-    background-color: var(--gray-13);
+  background-color: var(--gray-13);
 
-  &:nth-child(1) { background-color: #1e1e2f; }
-  &:nth-child(2) { background-color: #2a1f1f; }
-  &:nth-child(3) { background-color: #1f2a24; }
+  &:nth-child(1) {
+    background-color: var(--secondary);
+  }
+
+  // Deep Navy
+  &:nth-child(2) {
+    background-color: var(--black-6);
+  }
+
+  // Charcoal
+  &:nth-child(3) {
+    background-color: var(--blue-7);
+  }
+
+  // Muted Blue
+  &:nth-child(4) {
+    background-color: var(--gray-5);
+  }
+
+  // Dark Grey
+  &:nth-child(5) {
+    background-color: var(--black-15);
+  }
+
+  // Darkest
+
+  // Hover effect to lighten slightly
+  transition: background-color 0.3s;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
 
   @include light {
-    &:nth-child(1) { background-color: var(--white) }
-    &:nth-child(2) { background-color: var(--gray-12); }
-  &:nth-child(3) { background-color: var(--gray-6);
-    h2,p{
-    color: var(--white) !important; 
+    &:nth-child(1) {
+      background-color: var(--white);
+    }
+
+    &:nth-child(2) {
+      background-color: var(--gray-12);
+    }
+
+    &:nth-child(3) {
+      background-color: var(--white-17);
+    }
+
+    &:nth-child(4) {
+      background-color: var(--white-18);
+    }
+
+    &:nth-child(5) {
+      background-color: var(--gray-12);
+    }
+
+    // Ensure text is readable in light mode for all variants if needed
+    // But relying on existing h2, p styles usually handling it.
+    // Adding a catch-all to ensure dark text on light backgrounds if specific overrides existed.
+    h2,
+    p,
+    .title,
+    .category {
+      // Light mode specific colors usually handled by mixins or specific selectors
     }
   }
 
-  
-}
+
   @media #{$sm} {
     max-width: 100%;
   }
@@ -145,7 +196,7 @@
     line-height: 1.8;
     color: var(--gray1);
     text-transform: uppercase;
-  
+
   }
 
   .title {
@@ -156,7 +207,7 @@
     color: var(--gray1);
     margin-top: 3px;
 
-   
+
 
     @media #{$lg} {
       font-size: 16px;
@@ -310,6 +361,7 @@
         }
 
         li {
+
           span,
           .title {
             color: #a4abbb;
@@ -501,7 +553,7 @@
 .pd-portfolio {
   padding-inline-start: 5px;
   padding-inline-end: 5px;
-    background-color: var(--gray-13);
+  background-color: var(--gray-13);
 
   .sec-title-wrapper {
     padding-bottom: 50px;
@@ -781,6 +833,7 @@
         }
 
         li {
+
           span,
           .title {
             color: #a4abbb;
@@ -811,11 +864,12 @@
     }
   }
 }
+
 .portfolio-card1-small {
   border-radius: 24px;
   padding: 15px;
 
-   .portfolio-inner {
+  .portfolio-inner {
     border-radius: 24px;
     height: 100%;
     display: flex;
@@ -850,7 +904,7 @@
 
 .portfolio-card1-small {
 
- 
+
   .top-row {
     display: flex;
     justify-content: space-between;
