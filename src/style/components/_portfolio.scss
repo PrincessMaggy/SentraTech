@@ -93,9 +93,14 @@
     background-color: var(--black-6);
   }
 
-  // Charcoal
+  // Charcoal -> Deep Black
   &:nth-child(3) {
-    background-color: var(--blue-7);
+    background-color: var(--black-2);
+
+    .category,
+    .title {
+      color: var(--white) !important;
+    }
   }
 
   // Muted Blue
@@ -127,7 +132,10 @@
     }
 
     &:nth-child(3) {
-      background-color: var(--white-17);
+      background-color: var(--black-2);
+      .category, .title{
+          color: var(--white) !important;
+      }
     }
 
     &:nth-child(4) {

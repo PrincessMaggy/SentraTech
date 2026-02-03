@@ -23,9 +23,9 @@ export default function SkillCard({ skill, i = 0 }) {
         }}
       >
         <Image
-          width={26}
-          height={26}
-          style={{ width: "auto" }}
+          width={100}
+          height={100}
+          style={{ width: "auto", height: "auto", objectFit: "contain" }}
           priority
           src={skill.image}
           alt="Skill Icon"

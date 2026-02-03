@@ -16,7 +16,7 @@ export default function ServiceCard({ service = undefined, i = 0 }) {
           <Image width={500} height={200} src={image} alt="Icon" />
         </div>
         <h2
-          className="title"
+          className="title mb-1"
           dangerouslySetInnerHTML={convertWithBrSpanImg(title)}
         />
         <p className="desc" style={{ color: "var(--gray1)" }}>
