@@ -3,24 +3,26 @@
 /*----------------------------------------*/
 .main-menu {
   width: 100%;
-  > ul {
+
+  >ul {
     display: flex;
 
-    > li {
+    >li {
       &:hover {
-        > a,
+
+        >a,
         span {
           color: var(--white);
         }
 
-        > ul {
+        >ul {
           opacity: 1;
           pointer-events: all;
           inset-inline-start: 0;
 
           &.dp-menu li {
             &:hover {
-              > ul {
+              >ul {
                 opacity: 1;
                 pointer-events: all;
                 inset-inline-start: 100%;
@@ -52,10 +54,9 @@
   }
 
   ul.dp-menu {
-    background:linear-gradient(
-    to right,
-    rgba(30, 144, 255, 0.85),
-    rgba(0, 11, 21, 0.85));
+    background: linear-gradient(to right,
+        rgba(30, 144, 255, 0.85),
+        rgba(0, 11, 21, 0.85));
     padding: 18px 0px;
     width: 250px;
     position: absolute;
@@ -70,10 +71,9 @@
     }
 
     ul {
-      background:linear-gradient(
-    to right,
-    rgba(30, 144, 255, 0.85),
-    rgba(0, 11, 21, 0.85),);
+      background: linear-gradient(to right,
+          rgba(30, 144, 255, 0.85),
+          rgba(0, 11, 21, 0.85), );
       padding: 18px 0px;
       width: 300px;
       position: absolute;
@@ -89,12 +89,12 @@
       padding: 0 25px;
 
       &:hover {
-        > a {
+        >a {
           color: var(--white);
           background-color: transparent;
         }
 
-        > ul {
+        >ul {
           opacity: 1;
           transform: none !important;
           pointer-events: all;
@@ -129,13 +129,15 @@
       margin-inline-start: 5px;
     }
   }
-  .menu-btn{
+
+  .menu-btn {
     align-self: center;
   }
 }
 
-.main-menu > ul > li > a,
-.main-menu > ul > li > span,.active-nav {
+.main-menu>ul>li>a,
+.main-menu>ul>li>span,
+.active-nav {
   position: relative;
   color: var(--white);
 
@@ -146,18 +148,18 @@
     right: 25px;
     bottom: 15px;
     height: 2px;
-    background-color: #FFB21E;
+    background-color: var(--gold);
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;
   }
 }
 
-.main-menu > ul > li:hover > a::after,
-.main-menu > ul > li:hover > span::after {
+.main-menu>ul>li:hover>a::after,
+.main-menu>ul>li:hover>span::after {
   transform: scaleX(1);
 }
+
 .active-nav::after {
   transform: scaleX(1) !important;
 }
-

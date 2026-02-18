@@ -3,7 +3,7 @@
 .portfolio-modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(10, 26, 47, 0.8); // Deep Navy with opacity
+    background: rgba(10, 26, 47, 0.9); // Deep Navy with opacity
     backdrop-filter: blur(5px);
     z-index: 9999;
     display: flex;
@@ -31,7 +31,7 @@
     position: relative;
     transform: scale(0.8);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); // Bouncy effect
-    box-shadow: 0 10px 40px rgba(0, 229, 255, 0.2); // Cyan glow
+    box-shadow: 0 10px 40px rgba(255, 178, 30, 0.2); // Gold glow
 
     .portfolio-modal-overlay.open & {
         transform: scale(1);
@@ -49,14 +49,14 @@
         transition: color 0.3s;
 
         &:hover {
-            color: var(--cyan);
+            color: var(--gold);
         }
     }
 
     .coming-soon-badge {
         display: inline-block;
-        background: var(--primary); // Electric Blue
-        color: var(--white);
+        background: var(--gold); // Gold
+        color: var(--black-2);
         font-size: 12px;
         font-weight: 600;
         text-transform: uppercase;
@@ -81,7 +81,7 @@
     }
 
     h3 {
-        color: var(--cyan); // Bright Cyan
+        color: var(--gold); // Gold
         font-size: 20px;
         margin-bottom: 15px;
         font-weight: 600;
@@ -102,7 +102,7 @@
 
             &::before {
                 content: "•";
-                color: var(--primary); // Electric Blue bullet
+                color: var(--gold); // Gold bullet
                 position: absolute;
                 left: 0;
                 font-size: 20px;
@@ -121,23 +121,23 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            background-color: transparent; 
-            color: var(--black-2); 
+            background-color: transparent;
+            color: var(--black-2);
             border: none;
             padding: 18px 40px;
             font-size: 14px;
             font-weight: 500;
             text-transform: uppercase;
-            border-radius: 30px; 
+            border-radius: 30px;
             cursor: pointer;
             transition: all 0.5s;
-            text-decoration: none; 
+            text-decoration: none;
             position: relative;
             z-index: 1;
 
             // Ensure the ::after element from btn-hover-mask behaves correctly
             &::after {
-                background-color: var(--primary) !important; // Force Electric Blue bg
+                background-color: var(--gold) !important; // Force Gold bg
                 z-index: -1;
                 color: var(--black-2);
             }
@@ -147,22 +147,23 @@
                 color: var(--black-2);
                 transform: translateY(0); // Removing translateY to match contact button exactly if needed, or keeping if preferred. Contact has no translate.
 
-                 &::after {
+                &::after {
                     background-color: var(--white) !important;
-                 }
+                }
             }
-            
+
             // Override light mode specific global styles if they interfere
             @include light {
                 &::after {
-                    background-color: var(--primary) !important;
+                    background-color: var(--gold) !important;
                 }
-                
+
                 &:hover {
                     color: var(--black-2) !important;
-                     &::after {
+
+                    &::after {
                         background-color: var(--white) !important;
-                     }
+                    }
                 }
             }
         }

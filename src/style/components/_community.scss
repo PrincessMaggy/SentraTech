@@ -3,18 +3,20 @@
   display: inline-block;
   padding: 70px;
   background-color: var(--gray-13);
-    @media #{$sm} {
-      padding: 20px;
+
+  @media #{$sm} {
+    padding: 20px;
   }
 
-     @media #{$md} {
-      padding: 20px;
+  @media #{$md} {
+    padding: 20px;
   }
+
   .arrow-wrap {
-    width:200px; // Massive size as requested (approx 2x prominence)
+    width: 200px; // Massive size as requested (approx 2x prominence)
     height: 200px;
-    border-radius: 20px; 
-    background-color: var(--primary); 
+    border-radius: 20px;
+    background-color: var(--primary);
     border: 15px solid var(--gray-13); // Thick border to match bg
     display: flex;
     align-items: center;
@@ -28,7 +30,7 @@
     z-index: 10;
 
     &:hover {
-        transform: translate(30%, -30%) scale(1.05); // Subtle scale for large item
+      transform: translate(30%, -30%) scale(1.05); // Subtle scale for large item
     }
 
     @media #{$sm} {
@@ -36,47 +38,49 @@
       height: 70px;
       border-radius: 14px;
       border-width: 6px;
-      transform: translate(10%, -30%); 
-      
-       &:hover {
+      transform: translate(10%, -30%);
+
+      &:hover {
         transform: translate(10%, -30%) scale(1.1);
       }
     }
 
     svg {
-      color: var(--white); 
+      color: var(--white);
       font-size: 48px; // Scaled icon
       stroke: var(--white);
       stroke-width: 1.5;
       transform: rotate(-45deg);
     }
   }
+
   .cta-card {
     display: flex;
     align-items: stretch; // Ensure equal height for flush image
-    justify-content: center; 
+    justify-content: center;
     gap: 0; // Remove gap, handle spacing via padding
     background-color: var(--black-4);
     border-radius: 16px;
     min-width: 320px;
-    position: relative; 
+    position: relative;
     padding: 0; // Remove card padding for flush layout
     // overflow: hidden; // REMOVED to allow arrow to extend
-    
-  @media #{$sm} {
-    flex-direction: column; 
-    align-items: stretch; 
-    text-align: center; 
-    padding: 0; 
-    min-width: 150px;
-}
 
-  @media #{$md} {
-    flex-direction: column; 
-    align-items: stretch;
-    padding: 0;
-    min-width: 150px;
-}
+    @media #{$sm} {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+      padding: 0;
+      min-width: 150px;
+    }
+
+    @media #{$md} {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0;
+      min-width: 150px;
+    }
+
     @include light {
       background-color: var(--primary);
     }
@@ -94,26 +98,27 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top center; 
+      object-position: top center;
       box-shadow: none; // Remove shadow as it's flush
     }
 
     @media #{$sm} {
-        width: 100%; 
-        height: 250px; // Fixed height for mobile
-        margin-bottom: 0;
-        
-        img {
-            border-radius: 16px 16px 0 0; // Manual flush edges (Mobile)
-        }
+      width: 100%;
+      height: 250px; // Fixed height for mobile
+      margin-bottom: 0;
+
+      img {
+        border-radius: 16px 16px 0 0; // Manual flush edges (Mobile)
+      }
     }
-     @media #{$md} {
-        width: 100%;
-        height: 300px;
-        
-        img {
-            border-radius: 16px 16px 0 0;
-        }
+
+    @media #{$md} {
+      width: 100%;
+      height: 300px;
+
+      img {
+        border-radius: 16px 16px 0 0;
+      }
     }
   }
 
@@ -125,13 +130,14 @@
     justify-content: center;
 
     @media #{$sm} {
-       padding: 40px 20px 60px 20px; // Mobile padding
-       align-items: center;
+      padding: 40px 20px 60px 20px; // Mobile padding
+      align-items: center;
     }
-     @media #{$md} {
-       padding: 40px 20px 60px 20px;
-       align-items: center;
-       text-align: center;
+
+    @media #{$md} {
+      padding: 40px 20px 60px 20px;
+      align-items: center;
+      text-align: center;
     }
 
     .label {
@@ -157,12 +163,12 @@
 
   /* Detached arrow */
   .cta-arrow {
-  
+
     width: 56px;
     height: 56px;
     border-radius: 50%;
     background-color: var(--white);
-    color: var(--primary);
+    color: var(--gold);
     display: flex;
     align-items: center;
     justify-content: center;

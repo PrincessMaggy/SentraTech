@@ -19,9 +19,9 @@ export default function JoinCommunityCTA() {
           <h3 className="title">Join Our Community</h3>
         </div>
 
-        <div className="arrow-wrap">
+        <a href="https://discord.gg/eqhaSR83" target="_blank" className="arrow-wrap">
           <FaArrowRight />
-        </div>
+        </a>
       </div>
     </section>
   );

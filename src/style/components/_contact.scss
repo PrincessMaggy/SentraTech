@@ -50,7 +50,7 @@
       transition: all 0.3s;
 
       &:hover {
-        color: var(--primary);
+        color: var(--gold);
 
         @include light {
           color: var(--primary);
@@ -71,7 +71,7 @@
     }
   }
 
-   .nameT {
+  .nameT {
     font-size: 13px;
     line-height: 1.5;
     color: var(--white);
@@ -85,10 +85,13 @@
 
   .form {
     position: relative;
-    .input-item p{
-      color:  red;
+
+    .input-item p {
+      color: red;
     }
+
     &.common {
+
       .input-item input,
       .input-item textarea {
         @include light {
@@ -104,10 +107,11 @@
       gap: 30px;
       color: var(--black-3);
       border-radius: 24px;
-         @include light {
-      background-color: var(--white);
 
-    }
+      @include light {
+        background-color: var(--white);
+
+      }
 
       @media #{$lg} {
         gap: 20px;
@@ -132,7 +136,8 @@
         outline: none;
         color: var(--gray-4);
         background-color: var(--white-4);
-border-radius: 56px;
+        border-radius: 56px;
+
         @include light {
           background-color: var(--gray-10);
         }
@@ -145,7 +150,7 @@ border-radius: 56px;
         outline: none;
         height: 150px;
         resize: none;
-border-radius: 24px;
+        border-radius: 24px;
         color: var(--gray-4);
         background-color: var(--white-4);
 
@@ -164,7 +169,7 @@ border-radius: 24px;
         color: var(--black-2);
 
         &::after {
-          background-color: var(--primary);
+          background-color: var(--gold);
           z-index: -1;
         }
 
@@ -201,36 +206,37 @@ border-radius: 24px;
   }
 }
 
-.contact-section{
-  .sec-p{
+.contact-section {
+  .sec-p {
     font-size: 16px !important;
     line-height: 1.6;
     color: var(--gray1);
   }
-.sec-title{
+
+  .sec-title {
     font-weight: 500 !important;
     font-size: 50px !important;
+  }
 }
-}
+
 .contact-section {
   .grid {
-    position: relative; 
+    position: relative;
 
     &::before {
       content: "";
       position: absolute;
-      left: 0; 
+      left: 0;
       top: 0;
       bottom: 0;
-      width: 4px; 
-      background-color: var(--primary); 
-      border-radius: 2px; 
+      width: 4px;
+      background-color: var(--gold);
+      border-radius: 2px;
     }
 
     .type {
-      padding-left: 20px; 
-      margin-bottom: 20px; 
+      padding-left: 20px;
+      margin-bottom: 20px;
     }
   }
 }
-

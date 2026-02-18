@@ -61,7 +61,7 @@
 
     &:hover {
       color: var(--black-2);
-      background-color: var(--white);
+      background-color: var(--gold);
 
       @include light {
         color: var(--white);
@@ -129,7 +129,7 @@
     }
 
     &:hover {
-      color: var(--primary);
+      color: var(--gold);
 
       &::after {
         width: 0%;
@@ -205,7 +205,7 @@
     }
 
     &:hover {
-      color: var(--primary) !important;
+      color: var(--gold) !important;
 
       img {
         transform: rotate(45deg);
@@ -353,7 +353,7 @@
     }
 
     &:hover {
-      color: var(--primary);
+      color: var(--gold);
     }
   }
 
@@ -440,7 +440,7 @@
         height: 0%;
         left: 50%;
         top: 50%;
-        background-color: var(--primary);
+        background-color: var(--gold);
         transform: translateX(-50%) translateY(-50%) rotate(90deg);
         transition: all 0.75s;
         opacity: 0.5;
@@ -448,7 +448,7 @@
       }
 
       &:hover {
-        border-color: var(--primary);
+        border-color: var(--gold);
         background-color: transparent;
 
         &::after {
@@ -526,6 +526,7 @@
       }
     }
   }
+
   &-rollover {
     &-top {
       position: relative;
@@ -539,12 +540,12 @@
         width: 100%;
         z-index: -1;
         content: "";
-        background-color: var(--primary);
+        background-color: var(--gold);
         transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
       }
 
       &:hover {
-        border-color: var(--primary);
+        border-color: var(--gold);
         background-color: transparent;
 
         &::before {
@@ -682,13 +683,13 @@
     z-index: -1;
     border-radius: 100%;
     transition: all 1s;
-    background-color: var(--primary);
+    background-color: var(--gold);
     transform: translate(-50%, -50%);
   }
 
   &:hover {
     color: var(--black-2);
-    border: 1px solid var(--primary);
+    border: 1px solid var(--gold);
 
     span {
       width: 400px;
@@ -716,7 +717,7 @@
   }
 
   &:hover {
-    border-color: var(--primary);
+    border-color: var(--gold);
   }
 
   svg {

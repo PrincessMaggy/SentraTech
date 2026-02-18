@@ -602,6 +602,11 @@
   filter: grayscale(1);
 }
 
+::selection {
+  background: var(--gold);
+  color: #000;
+}
+
 .share-text {
   font-weight: 400;
   font-size: 14px;
