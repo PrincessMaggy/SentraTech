@@ -61,7 +61,7 @@ export default function PortfolioModal({ isOpen, onClose, portfolio }) {
 
         <div className="modal-actions">
           <a
-            href="https://forms.gle/RnbHxdH9SsENyKNt7"
+            href="https://forms.gle/HqPsABRLQYrbx28f9"
             target="_blank"
             rel="noopener noreferrer"
             className="waitlist-btn btn-hover-mask"
