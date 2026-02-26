@@ -3,7 +3,7 @@ title: "Tech Productivity & Leadership"
 image: "/assets/imgs/portfolio/items/3.png"
 draft: false
 category:
-  - "Programs"
+  - "Leadership"
 start_date: "Coming Soon"
 end_date: "Coming Soon"
 tools: "Communication, Critical Thinking, Emotional Intelligence"

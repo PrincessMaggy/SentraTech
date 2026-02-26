@@ -1,5 +1,5 @@
 ---
-title: "Automation & AI for Work"
+title: "Practical AI Skills for Everyday Professionals"
 image: "/assets/imgs/portfolio/items/1.png"
 draft: false
 category:
@@ -15,10 +15,10 @@ benefits:
   - "One clear, structured path instead of scattered courses"
 outline:
   - "Module 1: Automation Fundamentals"
-  - "Module 2: Python for Workflows"
+  - "Module 2: No Code Automation"
   - "Module 3: AI tools integration"
   - "Module 4: Capstone Automation Project"
 meta:
-  meta_title: "Automation & AI for Work"
+  meta_title: "Practical AI Skills for Everyday Professionals"
   meta_description: "Build real-world automation skills and gain confidence using AI tools at work."
 ---
