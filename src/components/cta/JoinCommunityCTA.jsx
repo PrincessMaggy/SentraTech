@@ -19,7 +19,11 @@ export default function JoinCommunityCTA() {
           <h3 className="title">Join Our Community</h3>
         </div>
 
-        <a href="https://discord.gg/eqhaSR83" target="_blank" className="arrow-wrap">
+        <a
+          href="https://join.slack.com/t/sentratechinstitute/shared_invite/zt-3urelpj8g-H7zjpItq1lerkz0MRvLkuw"
+          target="_blank"
+          className="arrow-wrap"
+        >
           <FaArrowRight />
         </a>
       </div>
