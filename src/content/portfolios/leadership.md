@@ -1,28 +1,26 @@
 ---
-title: "Leadership Seminar"
+title: "Professional & Leadership Edge"
 image: "/assets/imgs/portfolio/items/3.png"
 draft: false
 category:
-  - "Leadership"
+  - "Programs"
 start_date: "Coming Soon"
 end_date: "Coming Soon"
-tools: "Leadership Coaching, Soft Skills Training"
-description: "This program blends emotional intelligence, communication, and ethical leadership to prepare participants to lead teams effectively in a digital-first world."
-main_content:
-  - type: "only-heading"
-    heading: "Overview"
-  - type: "only-text"
-meta:
-  meta_title: "Future-Ready Leadership Program"
-  meta_description: "An upcoming SentraTech program focused on soft skills and leadership development."
+tools: "Communication, Critical Thinking, Emotional Intelligence, Leadership Coaching"
+description: "A 6-week program designed for all learners to build communication excellence, critical thinking, emotional intelligence, and workplace effectiveness. Graduate as a confident, high performing professional ready to lead with impact in any environment."
+cta_text: "Join Waiting List for Professional & Leadership Edge"
 benefits:
-  - "Develop a personal leadership style"
-  - "Learn to manage diverse teams"
-  - "Conflict resolution strategies"
-  - "Strategic decision making"
+  - "Master communication skills for high stakes professional settings"
+  - "Develop emotional intelligence and self leadership"
+  - "Sharpen critical thinking and problem solving abilities"
+  - "Build leadership presence and team collaboration skills"
 outline:
-  - "Module 1: Self-Leadership"
-  - "Module 2: Team Dynamics"
-  - "Module 3: Organizational Culture"
-  - "Module 4: Leading Change"
+  - "Module 1: Communication Excellence & Workplace Influence"
+  - "Module 2: Critical Thinking & Problem Solving Frameworks"
+  - "Module 3: Emotional Intelligence & Self Leadership"
+  - "Module 4: Collaboration, Remote Work & Leading Teams"
+  - "Module 5: Capstone, Personal Leadership Brand Presentation"
+meta:
+  meta_title: "Professional & Leadership Edge"
+  meta_description: "A 6-week program to build communication, critical thinking, and emotional intelligence for confident, high performing professionals."
 ---

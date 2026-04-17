@@ -39,7 +39,7 @@
     "subscription": {
       "enable": true,
       "title": "Stay in touch",
-      "sub_title": "Get updated information and daily tips for your hair",
+      "sub_title": "Get updates on new programs, events, and career resources from SentraTech.",
       "input_placeholder": "Enter your email",
       "submit_button": {
         "enable": true,
@@ -48,9 +48,9 @@
       }
     },
     "court_fees": {
-      "enable": true,
-      "title": "All court and law fees start at",
-      "price": "$28.09"
+      "enable": false,
+      "title": "",
+      "price": ""
     }
   },
   "social": [

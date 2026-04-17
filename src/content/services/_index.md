@@ -4,16 +4,16 @@
 sec_name: "Services"
 sec_title: "What We Offer at SentraTech"
 inner_title: "Learn. <br> Automate. <br> Lead."
-short_details: "We empower learners and organizations with future-ready skills in automation, artificial intelligence, and leadership, blending technology with human-centered values."
+short_details: "SentraTech equips individuals and organizations with practical skills in technology, productivity, and leadership, leveraging AI and modern tools to prepare them for the future of work."
 content:
   - type: "only-image"
     image: "/assets/imgs/service/image.jpg"
   - type: "only-text"
-    text: "Through our programs and workshops, we provide hands-on learning in business automation, artificial intelligence, and soft skills. Our approach ensures participants gain both technical expertise and the leadership qualities needed to thrive in a fast-changing world."
+    text: "Through immersive programs, ethical learning, and human centered technology, SentraTech is shaping a generation of innovators who lead with impact and purpose. From cohort based bootcamps and self paced tracks to corporate training and community hackathons, our offerings are designed for every stage of your career journey."
 shape:
   enable: true
   image: "/assets/imgs/common/dev-shape-6.png"
 meta:
   meta_title: "SentraTech Services"
-  meta_description: "Explore SentraTech Institute’s services in automation, AI, and soft skills development designed to equip learners and organizations for the future."
+  meta_description: "Explore SentraTech Institute's services, from automation and AI training to leadership development, career support, and community programs."
 ---
